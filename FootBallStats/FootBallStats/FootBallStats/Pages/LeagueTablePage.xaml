@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="FootBallStats.Pages.LeagueTablePage" BackgroundColor="DarkBlue" x:Name="LeagueTableContentPage">
+    
+    <ScrollView>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="DarkBlue" x:Name="LeagueTableIndicatorStack" BindingContext="{x:Reference LeagueTableContentPage}">
+                <ActivityIndicator x:Name="LeagueTableIndicator" HorizontalOptions="Center" VerticalOptions="Center"  Color="White" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"></ActivityIndicator>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." TextColor="White"/>
+            </StackLayout>
+
+            <SearchBar x:Name="txtSearch" Placeholder="Search Teams..."
+                 BackgroundColor ="White"
+                 TextChanged="onTextChanged"></SearchBar>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="DarkBlue" x:Name="LeagueTableStack">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Img"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="20" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                    <Label Text="Team"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="160" HorizontalOptions="CenterAndExpand" FontSize="Small"/>
+                    <Label Text="Points"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                    <Label Text="Goals"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                    <Label Text="G.Against"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="6"/>
+                    <Label Text="Wins"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                    <Label Text="Draws"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                    <Label Text="Losses"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand" FontSize="7"/>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <ListView x:Name="lstCompetitionLeagueTable" BackgroundColor="LightBlue" ItemsSource="{Binding .}"  GroupDisplayBinding="{Binding Key}" 
+              CachingStrategy="RecycleElement"  IsPullToRefreshEnabled="True"
+                Refreshing="onRefresh">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" >
+                                        <ffimageloadingsvg:SvgCachedImage WidthRequest="20" HeightRequest="20" Source="{Binding crestURI}"/>
+                                        <Label Text="{Binding teamName}"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="160" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding points}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding goals}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding goalsAgainst}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding wins}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding draws}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding losses}"  TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="30" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

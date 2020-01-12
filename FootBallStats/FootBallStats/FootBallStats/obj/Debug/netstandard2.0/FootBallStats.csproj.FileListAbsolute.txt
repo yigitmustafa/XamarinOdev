@@ -1,0 +1,14 @@
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\bin\Debug\netstandard2.0\FootBallStats.deps.json
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\bin\Debug\netstandard2.0\FootBallStats.dll
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.csprojAssemblyReference.cache
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\App.xaml.g.cs
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.csproj.CoreCompileInputs.cache
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.AssemblyInfoInputs.cache
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.AssemblyInfo.cs
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\XamlC.stamp
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\Pages\LeagueTablePage.xaml.g.cs
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\Pages\TeamList.xaml.g.cs
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\bin\Debug\netstandard2.0\FootBallStats.pdb
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.dll
+c:\users\trksbs\source\repos\FootBallStats\FootBallStats\FootBallStats\obj\Debug\netstandard2.0\FootBallStats.pdb

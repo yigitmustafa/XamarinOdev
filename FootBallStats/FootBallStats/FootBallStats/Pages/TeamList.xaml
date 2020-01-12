@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FootBallStats.Pages.TeamList" x:Name="TeamListContentPage" BackgroundColor="DarkBlue">
+    
+    
+    <ScrollView>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="DarkBlue" x:Name="TeamListIndicatorStack" BindingContext="{x:Reference TeamListContentPage}">
+                <ActivityIndicator x:Name="TeamListIndicator" HorizontalOptions="Center" VerticalOptions="Center"  Color="White" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"></ActivityIndicator>
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Loading..." TextColor="White"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="DarkBlue" x:Name="TeamListStack">
+                <ListView x:Name="lstCompetitionTeams" BackgroundColor="LightBlue">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" >
+                                    <Label Text="{Binding name}"  TextColor="White" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>
